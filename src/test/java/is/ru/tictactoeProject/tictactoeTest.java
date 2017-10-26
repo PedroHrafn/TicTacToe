@@ -155,10 +155,14 @@ public class tictactoeTest {
 	{
 		tictactoe game = new tictactoe();
 		game.placeMark(0,0); // p1
+		assertEquals(false, game.winConditions(game.getBoard()));
 		game.placeMark(1,0); // p2
+		assertEquals(false, game.winConditions(game.getBoard()));
 		game.placeMark(0,1); // p1
+		assertEquals(false, game.winConditions(game.getBoard()));
 		game.placeMark(2,0); // p2
+		assertEquals(false, game.winConditions(game.getBoard()));
 		game.placeMark(0,2); // p1
-		assertEquals(true, game.winConditions(game.getBoard()));
+		assertEquals(true,  game.winConditions(game.getBoard()));
 	}
 }  
