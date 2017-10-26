@@ -1,4 +1,4 @@
-package is.ru.stringcalculator;
+package is.ru.tictactoeProject;
 
 public class tictactoe {
 
