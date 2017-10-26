@@ -79,11 +79,4 @@ public class tictactoeTest {
 		game.changePlayer();
 		assertEquals('o',game.getPlayer());
 	}
-
-	@Test
-	public void testWinConditions()
-	{
-		tictactoe game = new tictactoe();
-		assertEquals(false, game.winConditions(game.getBoard()));
-	}
 } 
