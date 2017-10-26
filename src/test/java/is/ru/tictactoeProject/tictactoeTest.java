@@ -28,4 +28,30 @@ public class tictactoeTest {
 		tictactoe game = new tictactoe();
 		assertEquals(false, game.isFull());
 	}
+
+	@Test
+	public void testPlaceMarkTwice() {
+
+		tictactoe game = new tictactoe();
+		assertEquals(true, game.placeMark(0,1));
+		assertEquals(false, game.placeMark(0,1));
+	}
+	@Test
+	public void testPlaceMarkOutSideOfBoard() {
+
+		tictactoe game = new tictactoe();
+		assertEquals(false, game.placeMark(3,3));
+	}
+	@Test
+	public void testPlaceMarkSuccess() {
+
+		tictactoe game = new tictactoe();
+		assertEquals(true, game.placeMark(1,1));
+		assertEquals(true, game.placeMark(2,1));
+		assertEquals(true, game.placeMark(2,0));
+		assertEquals(true, game.placeMark(0,2));
+		assertEquals(true, game.placeMark(2,2));
+
+	}
+
 } 
