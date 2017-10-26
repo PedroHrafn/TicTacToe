@@ -1,4 +1,4 @@
-package is.ru.stringcalculator;
+package is.ru.tictactoeProject;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
