@@ -58,4 +58,13 @@ public class tictactoeTest {
 				}
 			}
 	}
+
+	@Test
+	public void testChangePlayer()
+	{
+		tictactoe game = new tictactoe();
+		assertEquals('x',game.getPlayer());
+		game.changePlayer();
+		assertEquals('o',game.getPlayer());
+	}
 } 

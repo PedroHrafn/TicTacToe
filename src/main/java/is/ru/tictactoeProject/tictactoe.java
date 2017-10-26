@@ -38,5 +38,17 @@ public class tictactoe {
         return false;
     }
 
+    public void changePlayer() {
+        if (currentPlayerMark == 'x') {
+            currentPlayerMark = 'o';
+        }
+        else {
+            currentPlayerMark = 'x';
+        }
+    }
 
+    public char getPlayer()
+    {
+        return currentPlayerMark;
+    }
 }	
