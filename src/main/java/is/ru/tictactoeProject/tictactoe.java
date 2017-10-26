@@ -23,5 +23,20 @@ public class tictactoe {
     public char[][] getBoard() {
     	return board;
     }
-	
+
+    public boolean placeMark(int row, int col) {
+        
+        if ((row >= 0) && (row < 3)) {
+            if ((col >= 0) && (col < 3)) {
+                if (board[row][col] == '-') {
+                    board[row][col] = currentPlayerMark;
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
+
 }	
