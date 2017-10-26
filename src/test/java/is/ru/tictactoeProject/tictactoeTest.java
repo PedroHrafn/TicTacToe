@@ -117,4 +117,11 @@ public class tictactoeTest {
 		}
 		assertEquals(false, game.isFull());
 	}
+
+	@Test
+	public void testCheckIfSame() {
+		tictactoe game = new tictactoe();
+		assertEquals(false, game.checkIfSame('o', 'x', 'x'));
+	}
+
 } 
