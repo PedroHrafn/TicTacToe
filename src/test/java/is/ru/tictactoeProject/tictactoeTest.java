@@ -53,5 +53,16 @@ public class tictactoeTest {
 		assertEquals(true, game.placeMark(2,2));
 
 	}
+	@Test
+	public void testPlaceMarkFillBoard() {
 
+	tictactoe game = new tictactoe();
+	for (int i = 0; i < 3 ; i++ ) {
+
+			for (int j = 0; j < 3 ; j++ ) {
+
+					assertEquals(true, game.placeMark(i,j));
+				}
+			}
+	}
 } 
