@@ -123,11 +123,17 @@ public class tictactoeTest {
 		tictactoe game = new tictactoe();
 		assertEquals(false, game.checkIfSame('o', 'x', 'x'));
 	}
-	}
+	
 	@Test
 	public void testCheckIfSamePlayerX() {
 		tictactoe game = new tictactoe();
 		assertEquals(true, game.checkIfSame('x', 'x', 'x'));
 
 	}
-} 
+	@Test
+	public void testCheckIfSamePlayerO() {
+		tictactoe game = new tictactoe();
+		assertEquals(true, game.checkIfSame('o', 'o', 'o'));
+
+	}
+}  
