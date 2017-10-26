@@ -24,6 +24,18 @@ public class tictactoe {
     	return board;
     }
 
+    public boolean isFull() {
+
+    	for(int i = 0; i < 3; i++) {
+    		for(int j = 0; j < 3; j++) {
+    			if(board[i][j] == '-') {
+    				return false;
+    			}
+    		}
+    	}
+    	return true;
+    }
+	
     public boolean placeMark(int row, int col) {
         
         if ((row >= 0) && (row < 3)) {
@@ -37,6 +49,7 @@ public class tictactoe {
         
         return false;
     }
+<<<<<<< HEAD
 
     public void changePlayer() {
         if (currentPlayerMark == 'x') {
@@ -51,4 +64,6 @@ public class tictactoe {
     {
         return currentPlayerMark;
     }
+=======
+>>>>>>> f01851458eb159fa4b439665549ed64a437cb70e
 }	

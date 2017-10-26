@@ -22,14 +22,21 @@ public class tictactoeTest {
 
 		assertEquals(cmp, game.getBoard());
 	}
-		@Test
+
+	@Test
+	public void testIsFullOnEmptyBoard() {
+		tictactoe game = new tictactoe();
+		assertEquals(false, game.isFull());
+	}
+
+	@Test
 	public void testPlaceMarkTwice() {
 
 		tictactoe game = new tictactoe();
 		assertEquals(true, game.placeMark(0,1));
 		assertEquals(false, game.placeMark(0,1));
 	}
-@Test
+	@Test
 	public void testPlaceMarkOutSideOfBoard() {
 
 		tictactoe game = new tictactoe();
