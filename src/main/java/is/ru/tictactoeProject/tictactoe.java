@@ -1,6 +1,6 @@
 package is.ru.stringcalculator;
 
-public class Calculator {
+public class tictactoe {
 
 	public static int Add(String text) {
 		if(text == "") {

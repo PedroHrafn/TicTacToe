@@ -1,0 +1,1 @@
+[![Build Status](travis-ci.org/peddilama/StringCalculator.png)](travis-ci.org/peddilama/StringCalculator)

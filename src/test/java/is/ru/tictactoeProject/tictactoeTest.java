@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
-public class CalculatorTest {
+public class tictactoeTest {
 	@Test
 	public void testEmptyString() {
 		assertEquals(0, Calculator.Add(""));
