@@ -46,11 +46,22 @@ public class tictactoeTest {
 	public void testPlaceMarkSuccess() {
 
 		tictactoe game = new tictactoe();
+
+		// Correct placements
 		assertEquals(true, game.placeMark(1,1));
 		assertEquals(true, game.placeMark(2,1));
 		assertEquals(true, game.placeMark(2,0));
 		assertEquals(true, game.placeMark(0,2));
 		assertEquals(true, game.placeMark(2,2));
+		
+		// Incorrect placements
+		assertEquals(false, game.placeMark(-1,1));
+		assertEquals(false, game.placeMark(-100,100));
+		assertEquals(false, game.placeMark(3,3));
+		assertEquals(false, game.placeMark(2,3));
+		assertEquals(false, game.placeMark(1,3));
+		assertEquals(false, game.placeMark(3,4));
+		assertEquals(false, game.placeMark(1,-1));
 
 	}
 	@Test
