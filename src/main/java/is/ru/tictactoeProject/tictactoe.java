@@ -4,11 +4,13 @@ public class tictactoe {
 
 	private char[][] board; 
     private char currentPlayerMark;
+    private boolean gameOver;
 			
     public tictactoe() {
         board = new char[3][3];
         currentPlayerMark = 'x';
         initializeBoard();
+        gameOver = false;
     }
 
     public void initializeBoard() {
@@ -36,12 +38,17 @@ public class tictactoe {
     	return true;
     }
 	
-    public boolean placeMark(int row, int col) {
-        
-        if ((row >= 0) && (row < 3)) {
-            if ((col >= 0) && (col < 3)) {
-                if (board[row][col] == '-') {
+    public boolean placeMark(int row, int col) 
+    {
+        if ((row >= 0) && (row < 3)) 
+        {
+            if ((col >= 0) && (col < 3)) 
+            {
+                if (board[row][col] == '-') 
+                {
                     board[row][col] = currentPlayerMark;
+                    winConditions(getBoard());
+                    changePlayer();
                     return true;
                 }
             }
@@ -50,7 +57,54 @@ public class tictactoe {
         return false;
     }
 
-    public void changePlayer() {
+    public boolean winConditions (char[][] board)
+    {
+        // Loop through possible straight lines 
+        // to check for win
+        for (int i = 0; i < 3; i++)
+        {
+            if( board[i][1] == board[i][0]
+            &&  board[i][1] == board[i][2])
+            {
+                if(board[i][1] != '-')
+                {
+                    return true;
+                }
+            }
+
+            if( board[0][i] == board[1][i]
+            &&  board[0][i] == board[2][i])
+            {
+                if(board[1][i] != '-')
+                {
+                    return true;
+                }
+            }
+        }
+
+        // Check for wins at angle
+        if ( board[1][1] == board[0][0] 
+        &&   board[1][1] == board[2][2])
+        {
+            if (board[1][1] != '-')
+            {
+                return true;
+            }
+        }
+        
+        if ( board[2][0] == board[0][2] 
+        &&   board[2][0] == board[1][1])
+        {
+            if (board[2][0] != '-')
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+	public void changePlayer() {
         if (currentPlayerMark == 'x') {
             currentPlayerMark = 'o';
         }
@@ -71,6 +125,6 @@ public class tictactoe {
 	public static void main(String[] args)
 	{
 		return;
-	}
-	
+    }
+    
 }	
