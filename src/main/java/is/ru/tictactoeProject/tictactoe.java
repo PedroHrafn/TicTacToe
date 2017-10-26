@@ -63,6 +63,10 @@ public class tictactoe {
     {
         return currentPlayerMark;
     }
+
+    public boolean checkIfSame(char input1, char input2, char intput3) {
+        return((input1 != '-') && (input1 == input2) && (input2 == intput3));
+    }
 	
 	public static void main(String[] args)
 	{
