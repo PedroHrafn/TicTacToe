@@ -22,4 +22,10 @@ public class tictactoeTest {
 
 		assertEquals(cmp, game.getBoard());
 	}
+
+	@Test
+	public void testIsFullOnEmptyBoard() {
+		tictactoe game = new tictactoe();
+		assertEquals(false, game.isFull());
+	}
 } 
