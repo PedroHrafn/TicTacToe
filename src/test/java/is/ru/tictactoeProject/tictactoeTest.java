@@ -102,4 +102,19 @@ public class tictactoeTest {
 		}
 		assertEquals(true, game.isFull());
 	}
+	@Test
+	public void testIsFullOnPartlyFullBoard(){
+		tictactoe game = new tictactoe();
+		char cmp[][] = new char[3][3];
+
+		for (int i = 0; i < 2 ; i++ ) {
+
+			for (int j = 0; j < 2 ; j++ ) {
+				game.getPlayer();
+				game.placeMark(i,j);
+				game.changePlayer();
+			}
+		}
+		assertEquals(false, game.isFull());
+	}
 } 
