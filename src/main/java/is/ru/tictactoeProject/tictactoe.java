@@ -63,4 +63,10 @@ public class tictactoe {
     {
         return currentPlayerMark;
     }
+	
+	public static void main(String[] args)
+	{
+		return;
+	}
+	
 }	
