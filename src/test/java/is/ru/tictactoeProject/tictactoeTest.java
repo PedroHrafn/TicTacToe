@@ -42,6 +42,11 @@ public class tictactoeTest {
 		tictactoe game = new tictactoe();
 		assertEquals(false, game.placeMark(3,3));
 	}
+	public void testPlaceMarkOutSideOfBoard2() {
+
+		tictactoe game = new tictactoe();
+		assertEquals(false, game.placeMark(0,3));
+	}
 	@Test
 	public void testPlaceMarkSuccess() {
 
