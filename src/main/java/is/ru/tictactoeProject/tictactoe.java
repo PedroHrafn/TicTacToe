@@ -49,7 +49,6 @@ public class tictactoe {
         
         return false;
     }
-<<<<<<< HEAD
 
     public void changePlayer() {
         if (currentPlayerMark == 'x') {
@@ -64,6 +63,4 @@ public class tictactoe {
     {
         return currentPlayerMark;
     }
-=======
->>>>>>> f01851458eb159fa4b439665549ed64a437cb70e
 }	
