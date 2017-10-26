@@ -74,6 +74,19 @@ public class tictactoeTest {
 		game.changePlayer();
 		assertEquals('o',game.getPlayer());
 	}
+
+	@Test
+	public void testChangePlayerBackToSamePlayer()
+	{
+		tictactoe game = new tictactoe();
+		assertEquals('x',game.getPlayer());
+		game.changePlayer();
+		assertEquals('o',game.getPlayer());
+		game.changePlayer();
+		assertEquals('x',game.getPlayer());
+		
+	}
+
 	@Test
 	public void testIsFullOnFullBoard(){
 		tictactoe game = new tictactoe();
