@@ -6,6 +6,10 @@ public class tictactoeWeb {
     public static void main(String[] args) {
         staticFileLocation("/public");
         port(getHerokuPort());
+        get("/", (req, res) -> {
+            return "";
+        });
+    }
     }
 
     static int getHerokuPort() {
