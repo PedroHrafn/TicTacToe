@@ -4,9 +4,10 @@ import static spark.Spark.*;
 
 public class tictactoeWeb {
     public static void main(String[] args) {
+        staticFileLocation("/public");
         port(getHerokuPort());
         get("/", (req, res) -> {
-            return "No route specified. Try /add/1,2";
+            return "No route specified. Try /play/1,2";
         });
         get(
             "/play/:input",
