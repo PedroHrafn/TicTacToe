@@ -1,5 +1,7 @@
 package is.ru.tictactoeProject;
 
+import java.util.Scanner;
+
 public class tictactoe {
 
 	private char[][] board; 
@@ -146,7 +148,22 @@ public class tictactoe {
 	
 	public static void main(String[] args)
 	{
-		
+		tictactoe game = new tictactoe();
+		while (!game.isFull())
+		{
+			game.printBoard();
+			System.out.print(game.getPlayer() + " has to make a move \n");
+			Scanner in = new Scanner(System.in);
+			int n = in.nextInt();
+			int j = in.nextInt();
+			game.placeMark(n,j);
+			if(game.getGameOver())
+			{
+				game.changePlayer();
+				System.out.print(game.getPlayer() + " is the Winner Winner chicken dinner \n");
+				break;
+			}
+		}
 		return;
     }
     

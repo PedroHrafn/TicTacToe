@@ -29,5 +29,8 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
+run{
+    standardInput = System.in
+}
 
 task stage(dependsOn: ['installDist'])
