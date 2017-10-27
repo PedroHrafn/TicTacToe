@@ -10,7 +10,6 @@ public class tictactoeWeb {
             return "";
         });
     }
-    }
 
     static int getHerokuPort() {
         ProcessBuilder psb = new ProcessBuilder();
