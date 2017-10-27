@@ -6,13 +6,6 @@ public class tictactoeWeb {
     public static void main(String[] args) {
         staticFileLocation("/public");
         port(getHerokuPort());
-        get("/", (req, res) -> {
-            return "No route specified. Try /play/1,2";
-        });
-        get(
-            "/play/:input",
-            (req, res) -> play(req.params(":input"))
-        );
     }
 
     static int getHerokuPort() {

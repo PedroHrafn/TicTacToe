@@ -1,0 +1,22 @@
+h1{
+	text-align: center;
+}
+#game{
+	margin-left: calc(50% - 305px);
+}
+
+ul{
+  width: 610px;
+  height: 610px;
+  padding-left: 0px;
+  background-color: black;
+}
+
+.btn{
+  width: 200px;
+  height: 200px;
+  border-radius: 0px;
+  margin-right: 0.4px;
+  margin-bottom: 5px;
+  color: blue;
+}
