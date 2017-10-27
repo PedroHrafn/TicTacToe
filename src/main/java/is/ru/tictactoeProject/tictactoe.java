@@ -25,6 +25,10 @@ public class tictactoe {
     public char[][] getBoard() {
     	return board;
     }
+	
+	 public boolean getGameOver() {
+    	return gameOver;
+    }
 
     public boolean isFull() {
 
@@ -61,6 +65,7 @@ public class tictactoe {
     {
         // Loop through possible straight lines 
         // to check for win
+		getGameOver();
         for (int i = 0; i < 3; i++)
         {
             if( board[i][1] == board[i][0]
@@ -68,7 +73,8 @@ public class tictactoe {
             {
                 if(board[i][1] != '-')
                 {
-                    return true;
+                    gameOver = true;
+					return gameOver;
                 }
             }
 
@@ -77,7 +83,8 @@ public class tictactoe {
             {
                 if(board[1][i] != '-')
                 {
-                    return true;
+                    gameOver = true;
+					return gameOver;
                 }
             }
         }
@@ -88,7 +95,8 @@ public class tictactoe {
         {
             if (board[1][1] != '-')
             {
-                return true;
+                gameOver = true;
+                return gameOver;
             }
         }
         
@@ -97,7 +105,8 @@ public class tictactoe {
         {
             if (board[2][0] != '-')
             {
-                return true;
+				gameOver = true;
+                return gameOver;
             }
         }
 
@@ -124,6 +133,7 @@ public class tictactoe {
 	
 	public static void main(String[] args)
 	{
+		
 		return;
     }
     
