@@ -160,11 +160,12 @@ public class tictactoe {
 			if(game.getGameOver())
 			{
 				game.changePlayer();
-				game.printBoard();
 				System.out.print(game.getPlayer() + " is the Winner Winner chicken dinner \n");
 				break;
 			}
 		}
+        game.printBoard();
+        System.out.println("The game is a DRAW!!!!");
 		return;
     }
     
