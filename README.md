@@ -1,10 +1,11 @@
-[![Build Status](travis-ci.org/peddilama/StringCalculator.png)](travis-ci.org/peddilama/StringCalculator)
+[![Build Status](https://travis-ci.org/peddilama/TicTacToe.svg?branch=master)](https://travis-ci.org/peddilama/TicTacToe)
 
 #TicTacToe
 ========
 
-This is a simple TicTacToe program made in java and deployed online using heroku.
-Link : WIP
+This is a simple TicTacToe program made in java and was eant to be deployed online using heroku but we ran into problems.
+To execute in console type java -jar TicTacToe.jar
+Gradle test to run our unit tests.
 
 ##Features
 --------
