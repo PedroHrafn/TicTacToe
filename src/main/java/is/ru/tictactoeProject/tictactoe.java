@@ -146,7 +146,7 @@ public class tictactoe {
         return((input1 != '-') && (input1 == input2) && (input2 == intput3));
     }
 	
-	public void checkInput() {
+	public boolean checkInput() {
 		int n;
 		int j;
 		int input;
@@ -161,63 +161,65 @@ public class tictactoe {
 					n = 0;
 					j = 0;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 2){
 					n = 0;
 					j = 1;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 3){
 					n = 0;
 					j = 2;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 4){
 					n = 1;
 					j = 0;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 5){
 					n = 1;
 					j = 1;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 6){
 					n = 1;
 					j = 2;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 7){
 					n = 2;
 					j = 0;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 8){
 					n = 2;
 					j = 1;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else if (input == 9){
 					n = 2;
 					j = 2;
 					placeMark(n,j);
-					return;
+					return true;
 				}
 				else{
-				System.out.println("Please only use numbers between 1-9");
-			}
+					System.out.println("Please only use numbers between 1-9");
+				}
 			}	
 			else{
 				System.out.println("Please only use numbers between 1-9");
+				return false;
 			}
+			
 		}
 	}
 	
@@ -225,20 +227,26 @@ public class tictactoe {
 	public static void main(String[] args)
 	{
 		tictactoe game = new tictactoe();
-		while (!game.isFull())
-		{
+		int counter = 0;
+		while (!game.isFull()){
 			game.printBoard();
 			System.out.print(game.getPlayer() + " has to make a move \n");
 			game.checkInput();
-			if(game.getGameOver())
-			{
+			if(game.getGameOver()){
 				game.changePlayer();
 				System.out.print(game.getPlayer() + " is the Winner Winner chicken dinner \n");
+				
 				break;
 			}
+			counter ++;
+
+			
 		}
         game.printBoard();
-        System.out.println("The game is a DRAW!!!!");
+		if(counter > 8){
+			System.out.println("The game is a DRAW!!!!");
+		}	
+			
 		return;
     }
     
