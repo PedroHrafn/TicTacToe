@@ -146,6 +146,82 @@ public class tictactoe {
         return((input1 != '-') && (input1 == input2) && (input2 == intput3));
     }
 	
+	public void checkInput() {
+		int n;
+		int j;
+		int input;
+		while(true){
+			
+			Scanner in = new Scanner(System.in);
+			if(in.hasNextInt()){
+				
+				input = in.nextInt();	
+				
+				if (input == 1){
+					n = 0;
+					j = 0;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 2){
+					n = 0;
+					j = 1;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 3){
+					n = 0;
+					j = 2;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 4){
+					n = 1;
+					j = 0;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 5){
+					n = 1;
+					j = 1;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 6){
+					n = 1;
+					j = 2;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 7){
+					n = 2;
+					j = 0;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 8){
+					n = 2;
+					j = 1;
+					placeMark(n,j);
+					return;
+				}
+				else if (input == 9){
+					n = 2;
+					j = 2;
+					placeMark(n,j);
+					return;
+				}
+				else{
+				System.out.println("Please only use numbers between 1-9");
+			}
+			}	
+			else{
+				System.out.println("Please only use numbers between 1-9");
+			}
+		}
+	}
+	
+	
 	public static void main(String[] args)
 	{
 		tictactoe game = new tictactoe();
@@ -153,10 +229,7 @@ public class tictactoe {
 		{
 			game.printBoard();
 			System.out.print(game.getPlayer() + " has to make a move \n");
-			Scanner in = new Scanner(System.in);
-			int n = in.nextInt();
-			int j = in.nextInt();
-			game.placeMark(n,j);
+			game.checkInput();
 			if(game.getGameOver())
 			{
 				game.changePlayer();
