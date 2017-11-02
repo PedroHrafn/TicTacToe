@@ -10,7 +10,7 @@
 apply plugin: 'java-library'
 apply plugin: 'application'
 
-mainClassName = "is.ru.tictactoeProject.tictactoe"
+mainClassName = "is.ru.tictactoeProject.tictactoeWeb"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
